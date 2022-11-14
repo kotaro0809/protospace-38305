@@ -1,6 +1,6 @@
 class PrototypesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :prototype_usre?, only: [:edit, :update, :destroy]
+  
 
   def index
     @prototypes = Prototype.includes(:user)
@@ -53,8 +53,6 @@ class PrototypesController < ApplicationController
   end
 
   
-  def prototype_usre?
-    redirect_to root_path unless current_user == @prototype.user
-  end
+  
 
 end

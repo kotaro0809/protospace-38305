@@ -60,3 +60,9 @@ gem 'devise'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 
+
+#本番環境（Renderでの実行時）にPostgreSQLを使用できるようGemを追加します
+group :production do
+  gem 'pg'
+end
+
